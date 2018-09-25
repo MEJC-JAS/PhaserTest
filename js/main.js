@@ -43,9 +43,12 @@ function create() {
     //  Our two animations, walking left and right.
     player.animations.add('left', [0, 1, 2, 3], 10, true);
     player.animations.add('right', [5, 6, 7, 8], 10, true);
+    player.animations.add('idle', [4], 10, true);
 }
 
 function update() {
+    //  Collide the player with the platforms
+    game.physics.arcade.collide(player, platforms);
 }
 
 function render() {
