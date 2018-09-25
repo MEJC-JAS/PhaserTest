@@ -15,13 +15,10 @@ function preload() {
     game.load.image('sky', 'assets/sky.png');
     game.load.image('ground', 'assets/platform.png');
     game.load.image('star', 'assets/star.png');
+    game.load.spritesheet('coin', 'assets/coin.png', 32, 32);
 }
 
 function create() {
-    //var sprite = game.add.sprite(0, 0, 'phaser');
-    //var carrot = game.add.sprite(400, 300, 'star');
-
-
     //  We're going to be using physics, so enable the Arcade Physics system
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
@@ -55,9 +52,11 @@ function create() {
     stars.enableBody = true;
     for (var i = 0; i < 12; i++)
     {
-        var star = stars.create(i * 70, 0, 'star');
+        var star = stars.create(i * 70, 0, 'coin');
+        star.animations.add('idle', [0, 1, 2, 3, 4, 5], 10, true);
         star.body.gravity.y = 300;
         star.body.bounce.y = 0.7 + Math.random() * 0.2;
+        star.animations.play('idle');
     }
 
     //  The score
