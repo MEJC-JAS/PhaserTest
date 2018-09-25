@@ -6,7 +6,7 @@ var platforms;
 var player;
 
 function preload() {
-    game.load.spritesheet('phaser', 'assets/dude.png');
+    game.load.spritesheet('dude', 'assets/dude.png');
     game.load.image('sky', 'assets/sky.png');
     game.load.image('ground', 'assets/platform.png');
     game.load.image('star', 'assets/star.png');
