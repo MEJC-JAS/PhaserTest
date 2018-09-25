@@ -8,12 +8,16 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example',
 function preload() {
     game.load.baseURL = 'http://examples.phaser.io/assets/';
     game.load.crossOrigin = 'anonymous';
+
     game.load.image('phaser', 'sprites/phaser-dude.png');
-    console.log ( "preload done" );
+    game.load.image('sky', 'skies/sky1.png');
+    game.load.image('ground', 'sprites/platform.png');
+    game.load.image('carrot', 'sprites/carrot.png');
 }
 
 function create() {
     var sprite = game.add.sprite(0, 0, 'phaser');
+    var carrot = game.add.sprite(400, 300, 'carrot');
 }
 
 function update() {
@@ -21,5 +25,3 @@ function update() {
 
 function render() {
 }
-
-console.log ("This is a test" );
