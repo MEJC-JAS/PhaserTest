@@ -2,8 +2,7 @@
 var IDE_HOOK = false;
 var VERSION = '2.6.2';
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example',
-                           { preload: preload, create: create, update: update, render: render });
+var platforms;
 
 function preload() {
     game.load.baseURL = 'http://examples.phaser.io/assets/';
@@ -25,3 +24,6 @@ function update() {
 
 function render() {
 }
+
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example',
+                           { preload: preload, create: create, update: update, render: render });
