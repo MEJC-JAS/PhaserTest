@@ -5,18 +5,15 @@ var VERSION = '2.6.2';
 var platforms;
 
 function preload() {
-    game.load.baseURL = 'http://examples.phaser.io/assets/';
-    game.load.crossOrigin = 'anonymous';
-
-    game.load.image('phaser', 'sprites/phaser-dude.png');
-    game.load.image('sky', 'skies/sky1.png');
-    game.load.image('ground', 'sprites/platform.png');
-    game.load.image('carrot', 'sprites/carrot.png');
+    game.load.spritesheet('phaser', 'assets/dude.png');
+    game.load.image('sky', 'assets/sky.png');
+    game.load.image('ground', 'assets/platform.png');
+    game.load.image('star', 'assets/star.png');
 }
 
 function create() {
     //var sprite = game.add.sprite(0, 0, 'phaser');
-    //var carrot = game.add.sprite(400, 300, 'carrot');
+    //var carrot = game.add.sprite(400, 300, 'star');
 
 
     //  We're going to be using physics, so enable the Arcade Physics system
